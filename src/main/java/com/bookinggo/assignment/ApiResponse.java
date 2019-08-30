@@ -11,35 +11,45 @@ public class ApiResponse {
 
 
     public String getSupplierId() {
+
         return supplier_id;
     }
 
-    public String setSupplierId() {
-        return this.supplier_id = supplier_id;
+    public void setSupplierId(String id) {
+
+        this.supplier_id = supplier_id;
     }
 
     public String getPickup() {
+
         return pickup;
     }
 
-    public String setPickup() {
-        return this.pickup = pickup;
+    public void setPickup( String pickup) {
+         this.pickup = pickup;
     }
 
     public String getDropoff() {
+
         return dropoff;
     }
 
-    public String setDropoff() {
-        return this.dropoff = dropoff;
+    public void setDropoff( String pickup) {
+         this.dropoff = dropoff;
     }
 
     public ArrayList<RideOption>getRideOptions() {
         return options;
     }
 
+    public void setRideOptions( ArrayList<RideOption> options ) {
+        this.options = options;
+    }
+
     @Override
     public String toString() {
         return supplier_id + "  " + pickup + "  " + dropoff + "  " + options;
     }
+
+
 }

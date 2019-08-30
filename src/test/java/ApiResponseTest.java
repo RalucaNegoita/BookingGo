@@ -8,9 +8,6 @@ import static org.junit.Assert.assertEquals;
 public class ApiResponseTest {
     private ApiResponse testApi;
 
-    private ApiResponse supplierId;
-    private ApiResponse pickUp;
-    private ApiResponse dropOff;
 
     @Before
     public void setup() {
@@ -21,10 +18,11 @@ public class ApiResponseTest {
     @Test
     public void testSetSupplierId() {
 
-        String id = "testID";
-        testApi.setSupplierId( id );
+        String supplierId = "testing";
 
-        assertEquals ( id, testApi.getSupplierId() );
+        testApi.setSupplierId( supplierId );
+
+        assertEquals ( supplierId, testApi.getSupplierId() );
     }
 
     @Test
@@ -33,21 +31,21 @@ public class ApiResponseTest {
         String pickup = "4.0, 5.0";
         testApi.setPickup( pickup );
 
-        assertEquals( pickup, testApi.setPickup() );
+        assertEquals( pickup, testApi.getPickup() );
     }
 
     @Test
     public void testSetDropoff() {
+
         String dropoff = "4.0, 5.0";
-        testApi.setDropOff( dropoff );;
+        testApi.setDropoff( dropoff );
 
         assertEquals( dropoff, testApi.getDropoff() );
     }
 
-
 	@Test
 	public void testSetOptions() {
-		testApi.setOptions( null );
+		testApi.setRideOptions( null );
 
 		assertEquals(null, testApi.getRideOptions() );
 	}
